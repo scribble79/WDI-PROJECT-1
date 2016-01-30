@@ -2,29 +2,27 @@ $(document).ready(function(){
 
   $(window).on("keyup", checkKeyPressed);
    
+  
+//keys a and l used on the keyboard to allow 2 players to play the game
   function checkKeyPressed(e) {
     if (e.keyCode === 65) {
-        console.log("The 'a' key is pressed.");
+        console.log("snap");
     }
     else if (e.keyCode === 76) {
-     console.log("The 'l' key is pressed.");
+     console.log("snap");
     }
   }
   });
 
 
-var cards = ["A", "2", "3", "4", "5", "6"]
+  var cards = ["A", "2", "3", "4", "5", "6"]
 
 
-//setInterval from line 19 to line 35 to run a loop every 2's === 2000 until a snap occurs, the loop will keep going until someone has won the best of 3
+//setInterval to run a loop every 2's === 2000 until a snap occurs, the loop will keep going until someone has won the best of 3
 
- setInterval(function(){
+  setInterval(function(){
   console.log(currentCard1 && currentCard2);
  
-
- //function dealCards() {
-   // cards = setInterval(currentCard1 && currentCard2,500)
-  //}
 
   var randomIndex1 = Math.floor((Math.random()*6));
 
@@ -40,23 +38,28 @@ var cards = ["A", "2", "3", "4", "5", "6"]
   console.log(currentCard2)
 
 
+  var snap = cards[randomIndex1] === cards[randomIndex2]
 
-var snap = cards[randomIndex1] === cards[randomIndex2]
-
-
-//for(var i=snap; i=cards1[randomIndex1] === cards2[randomIndex2]; i++) {
-  //console.log("snap");
-//}
-
-
-  if (currentCard1 === currentCard2){
-    console.log("snap")
-  }
+    if (currentCard1 === currentCard2 && 65)
+      {
+    console.log()
+    }
 
   
-  }, 2000);
+    //}, 2000);
+
+  //win logic to register a winner and to play to 3 and mark the wins up on a scoreboard
+
+  //eventlisteners that register the a and l key being clicked to register a snap
   
 
+ //function dealCards() {
+   // cards = setInterval(currentCard1 && currentCard2,500)
+  //}
+
+ //for(var i=snap; i=cards1[randomIndex1] === cards2[randomIndex2]; i++) {
+   //console.log("snap");
+ //}
 
 //Snap game
 //2 player game
