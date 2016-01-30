@@ -20,7 +20,7 @@ var cards = ["A", "2", "3", "4", "5", "6"]
 
  setInterval(function(){
   console.log(currentCard1 && currentCard2);
- //}, 2000);
+ 
 
  //function dealCards() {
    // cards = setInterval(currentCard1 && currentCard2,500)
@@ -54,7 +54,7 @@ var snap = cards[randomIndex1] === cards[randomIndex2]
   }
 
   
-
+  }, 2000);
   
 
 
