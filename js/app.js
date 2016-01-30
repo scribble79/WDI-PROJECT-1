@@ -40,13 +40,27 @@ $(document).ready(function(){
 
   var snap = cards[randomIndex1] === cards[randomIndex2]
 
-    if (currentCard1 === currentCard2 && 65)
+    if (currentCard1 === currentCard2)
       {
-    console.log()
+    return snap;
+    }
+
+    function winner(point) {
+      if (65 && currentCard1 === currentCard2)
+        console.log("win")
+      else (76 && currentCard1 === currentCard2)
+        console.log("win")
     }
 
   
-    //}, 2000);
+    }, 2000);
+
+  //function snapHappened() {
+    //if 
+  //}
+
+  
+  
 
   //win logic to register a winner and to play to 3 and mark the wins up on a scoreboard
 
