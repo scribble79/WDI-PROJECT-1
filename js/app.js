@@ -18,9 +18,13 @@ var cards = ["A", "2", "3", "4", "5", "6"]
 
 //setInterval from line 19 to line 35 to run a loop every 2's === 2000 until a snap occurs, the loop will keep going until someone has won the best of 3
 
- function dealCards() {
-    cards = setInterval()
-  }
+ setInterval(function(){
+  console.log(currentCard1 && currentCard2);
+ //}, 2000);
+
+ //function dealCards() {
+   // cards = setInterval(currentCard1 && currentCard2,500)
+  //}
 
   var randomIndex1 = Math.floor((Math.random()*6));
 
@@ -49,7 +53,7 @@ var snap = cards[randomIndex1] === cards[randomIndex2]
     console.log("snap")
   }
 
- 
+  
 
   
 
