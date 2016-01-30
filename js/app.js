@@ -37,6 +37,9 @@ $(document).ready(function(){
     });
   
     
+function updateScoreBoard() {
+  $('#score1').text(userScore);
+  $('#score2').text(botScore);
 
   // if (currentCard1 === currentCard2)
   //   {
@@ -44,12 +47,12 @@ $(document).ready(function(){
   // }
 
 
-// function winner(point) {
-//   if (e.keyCode === 65 && currentCard1 === currentCard2)
-//     console.log("win")
-//   else (e.keyCode === 76 && currentCard1 === currentCard2)
-//     console.log("win")
-// }
+function winner(point) {
+   if (e.keyCode === 65 && currentCard1 === currentCard2)
+     console.log("win")
+   else (e.keyCode === 76 && currentCard1 === currentCard2)
+     console.log("win")
+ }
 
 
    //function snapHappened() {
