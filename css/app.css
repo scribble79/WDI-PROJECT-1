@@ -1,5 +1,7 @@
 body {
-  background-color: red;
+  background-image: url(../images/alice_in_wonderland_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 li {
