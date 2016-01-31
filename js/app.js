@@ -1,45 +1,89 @@
 $(document).ready(function(){
-  var cards = ["A", "2", "3", "4", "5", "6"]
+  var cards = ["A", "2", "3", "4", "5", "6"];
+  var currentCard1;
+  var currentCard2;
+  var snapped = false;
+  var player1Score = 0;
+  var player2Score = 0;
+  var $box2 = $('#box2');
+  var $box3 = $('#box3');
+  var timer1;
+  var timer2;
+  var snapCount = 0;
+
+  function updateScoreBoard() {
+    $('#score1').text(player1Score);
+    $('#score2').text(player2Score);
+  }
+
+
+  $("#reset").click(function() {
+    console.log("reset");
+    currentCard1 = null;
+    currentCard2 = null;
+    player1Score = 0;
+    player2Score = 0;
+    timer1;
+    timer2;
+    snapCount = 0;
+    clearTimers();
+    updateScoreBoard();
+
+  });
+
+  $(window).on("keyup", checkKeyPressed);
+  function checkKeyPressed(e) {
+    if(currentCard1 === currentCard2) {
+      if (e.keyCode === 65 && !snapped) {
+        snapped = true;
+        player1Score += 1;
+        snapCount += 1;
+        updateScoreBoard();
+        clearTimers();
+      }
+      else if (e.keyCode === 76 && !snapped) {
+        snapped = true;
+        player2Score += 1;
+        snapCount += 1;
+        updateScoreBoard();
+        clearTimers();
+      }
+    }
+  }
+
+  function clearTimers() {
+    if(snapCount === 5) {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    }
+  }
 
 //setInterval to run a loop every 2's === 2000 until a snap occurs, the loop will keep going until someone has won the best of 3
 
-  setInterval(function(){
-  console.log(currentCard1 && currentCard2);
+  timer1 = setInterval(function(){   
+    var randomIndex1 = Math.floor((Math.random()*6));
+    currentCard1 = cards[randomIndex1]
+    snapped = false;
+    $box2.text(currentCard1);    
+  }, 2000);
+
+  setTimeout(function() {
+    timer2 = setInterval(function(){  
+      var randomIndex2 = Math.floor((Math.random()*6));
+      currentCard2 = cards[randomIndex2];
+      snapped = false;
+      $box3.text(currentCard2);    
+    }, 2000);
+  }, 1000);
+});
  
-  var randomIndex1 = Math.floor((Math.random()*6));
-
-  var currentCard1 = cards[randomIndex1]
-
-  console.log(currentCard1)
-
-  var randomIndex2 = Math.floor((Math.random()*6));
-
-  var currentCard2 = cards[randomIndex2]
-
-  console.log(currentCard2)
-
-  var snap = cards[randomIndex1] === cards[randomIndex2]
-
+//win logic to register a winner and to play to 3 and mark the wins up on a scoreboard, and assign the A and L keys to player 1 and player 2  
     
-    //keys a and l used on the keyboard to allow 2 players to play the game
-    $(window).on("keyup", checkKeyPressed);
-     function checkKeyPressed(e) {
-      if (e.keyCode === 65 && currentCard1 === currentCard2) {
-          console.log("snap");
-      }
-      else if (e.keyCode === 76 && currentCard1 === currentCard2) {
-       console.log("snap");
-      }
-    }
-   
-    /}, 2000);
 
-    });
-  
-    
-function updateScoreBoard() {
-  $('#score1').text(userScore);
-  $('#score2').text(botScore);
+// var snap = cards[randomIndex1] === cards[randomIndex2]
+
+
+//keys a and l used on the keyboard to allow 2 players to play the game
 
   // if (currentCard1 === currentCard2)
   //   {
@@ -47,12 +91,12 @@ function updateScoreBoard() {
   // }
 
 
-function winner(point) {
-   if (e.keyCode === 65 && currentCard1 === currentCard2)
-     console.log("win")
-   else (e.keyCode === 76 && currentCard1 === currentCard2)
-     console.log("win")
- }
+// function winner(point) {
+//    if (e.keyCode === 65 && currentCard1 === currentCard2)
+//      console.log("win")
+//    else (e.keyCode === 76 && currentCard1 === currentCard2)
+//      console.log("win")
+//  }
 
 
    //function snapHappened() {
@@ -62,7 +106,7 @@ function winner(point) {
   
   
 
-  //win logic to register a winner and to play to 3 and mark the wins up on a scoreboard
+ 
 
   //eventlisteners that register the a and l key being clicked to register a snap
   
