@@ -50,6 +50,14 @@ $(document).ready(function(){
     }
   }
 
+  $('textarea').first().keypress(function (e)
+  {
+      if (e.which === 13) console.log('player1 enter key pressed');
+  }).nextAll().keypress(function (e)
+  {
+      if (e.which === 13) console.log('player2 enter key pressed');
+  });
+
   function clearTimers() {
     if(snapCount === 5) {
       clearTimeout(timer1);

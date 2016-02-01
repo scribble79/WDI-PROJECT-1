@@ -2,6 +2,7 @@ body {
   background-image: url(../images/alice_in_wonderland_2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 li {
@@ -15,13 +16,14 @@ ul {
   margin-left: 50px;
 }
 
-div {
+#player {
   position: relative;
-  margin-left: 450px;
+  margin:0 auto;
 }
 
 textarea {
   background: transparent;
+  border: 0 none;
   color: red;
   font-style: bold;
   font-family: cursive;
