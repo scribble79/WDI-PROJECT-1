@@ -1,5 +1,5 @@
 body {
-  background-image: url(../images/alice_in_wonderland_2.jpg);
+/*  background-image: url(../images/alice_in_wonderland_2.jpg);*/
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -7,14 +7,9 @@ body {
 
 li {
   display: inline-block;
+  vertical-align: top;
 }
 
-ul {
-  position: relative;
-  display: inline-block;
-  margin-top: 100px;
-  margin-left: 50px;
-}
 
 #player {
   position: relative;
@@ -25,11 +20,11 @@ textarea {
   background: transparent;
   border: 0 none;
   color: red;
-  font-style: bold;
+  font-weight: bolder;
   font-family: cursive;
   text-align: center;
-  font-size: 15pt;
-  margin-top: 100px;
+  font-size: 25pt;
+  margin-top: 150px;
 }
 
 #score1 {
@@ -49,10 +44,9 @@ textarea {
 }
 
 #box1 {
-  width: 350px;
-  height: 350px;
-  position: relative;
-  margin-bottom: 100px;
+  width: 300px;
+  height: 300px;
+
   background-image: no-repeat;
   background-size: contain;
 }
@@ -78,8 +72,9 @@ textarea {
 }
 
 #box4 {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
+
   background-image: no-repeat;
   background-size: contain;
 }
@@ -89,5 +84,15 @@ button {
   font-size: 20pt;
   position: fixed;
   bottom: 0;
+  left: 0;
+}
+
+#box1 img, #box4 img {
+  padding-top: 100px;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
   left: 0;
 }
