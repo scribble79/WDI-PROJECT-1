@@ -10,19 +10,24 @@ li {
 
 ul {
   position: relative;
+  display: inline-block;
   margin-top: 100px;
   margin-left: 50px;
 }
 
 div {
   position: relative;
-  margin-left: 500px;
+  margin-left: 450px;
 }
 
 textarea {
+  background: transparent;
+  color: red;
+  font-style: bold;
   font-family: cursive;
-  font-size: 10pt;
-  margin-top: 40px;
+  text-align: center;
+  font-size: 15pt;
+  margin-top: 100px;
 }
 
 #score1 {
@@ -44,6 +49,8 @@ textarea {
 #box1 {
   width: 350px;
   height: 350px;
+  position: relative;
+  margin-bottom: 100px;
   background-image: no-repeat;
   background-size: contain;
 }
