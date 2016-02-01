@@ -5,20 +5,80 @@ body {
 }
 
 li {
-  width: 100px;
-  height: 100px;
   display: inline-block;
-  background-color: grey;
+}
+
+ul {
+  position: relative;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+div {
+  position: relative;
+  margin-left: 500px;
+}
+
+textarea {
+  font-family: cursive;
+  font-size: 10pt;
+  margin-top: 40px;
 }
 
 #score1 {
   width: 50px;
   height: 50px;
-  background-color: grey;
+  font-family: cursive;
+  font-size: 50pt;
+  color: red;
 }
 
 #score2 {
   width: 50px;
   height: 50px;
-  background-color: grey;
+  font-family: cursive;
+  font-size: 50pt;
+  color: red;
+}
+
+#box1 {
+  width: 350px;
+  height: 350px;
+  background-image: no-repeat;
+  background-size: contain;
+}
+
+#box2 {
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#box3 {
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box4 {
+  width: 350px;
+  height: 350px;
+  background-image: no-repeat;
+  background-size: contain;
+}
+
+button {
+  font-family: cursive;
+  font-size: 20pt;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }

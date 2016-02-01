@@ -28,7 +28,6 @@ $(document).ready(function(){
     snapCount = 0;
     clearTimers();
     updateScoreBoard();
-
   });
 
   $(window).on("keyup", checkKeyPressed);
@@ -58,13 +57,11 @@ $(document).ready(function(){
     }
   }
 
-//setInterval to run a loop every 2's === 2000 until a snap occurs, the loop will keep going until someone has won the best of 3
-
   timer1 = setInterval(function(){   
     var randomIndex1 = Math.floor((Math.random()*6));
     currentCard1 = cards[randomIndex1]
     snapped = false;
-    $box2.text(currentCard1);    
+    $box2.css('background-image','url(images/' + currentCard1 + '.png)'); 
   }, 2000);
 
   setTimeout(function() {
@@ -72,11 +69,15 @@ $(document).ready(function(){
       var randomIndex2 = Math.floor((Math.random()*6));
       currentCard2 = cards[randomIndex2];
       snapped = false;
-      $box3.text(currentCard2);    
+      $box3.css('background-image','url(images/' + currentCard2 + '.png)');    
     }, 2000);
   }, 1000);
 });
  
+
+
+//setInterval to run a loop every 2's === 2000 until a snap occurs, the loop will keep going until someone has won the best of 3
+
 //win logic to register a winner and to play to 3 and mark the wins up on a scoreboard, and assign the A and L keys to player 1 and player 2  
     
 
