@@ -73,7 +73,7 @@ input {
   background-image: no-repeat;
   background-size: contain;
 }
-
+/*tried to get the images to transition*/
 #box2 {
   width: 300px;
   height: 300px;
