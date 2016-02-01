@@ -1,5 +1,5 @@
 body {
-/*  background-image: url(../images/alice_in_wonderland_2.jpg);*/
+  background-image: url(../images/alice_in_wonderland_2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -11,42 +11,65 @@ li {
 }
 
 
-#player {
-  position: relative;
-  margin:0 auto;
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-textarea {
+/* SCORES*/
+
+.scores {
+  margin-left: 10px;
+  color: red;
+}
+
+.scores li {
+  vertical-align: middle;
+  color: red;
+}
+
+#player1 {
+  color: red;
+}
+
+input {
+  width: 250px;
   background: transparent;
   border: 0 none;
-  color: red;
   font-weight: bolder;
   font-family: cursive;
   text-align: center;
+  color: red;
   font-size: 25pt;
   margin-top: 150px;
 }
 
 #score1 {
-  width: 50px;
-  height: 50px;
+  padding-top: 136px;
   font-family: cursive;
-  font-size: 50pt;
+  font-size: 50px;
   color: red;
 }
 
 #score2 {
-  width: 50px;
-  height: 50px;
+  padding-top: 136px;
   font-family: cursive;
-  font-size: 50pt;
+  font-size: 50px;
   color: red;
+}
+
+
+
+/* GAME */
+
+.list-container {
+  margin-top: 60px;
 }
 
 #box1 {
   width: 300px;
   height: 300px;
-
   background-image: no-repeat;
   background-size: contain;
 }
@@ -74,9 +97,12 @@ textarea {
 #box4 {
   width: 300px;
   height: 300px;
-
   background-image: no-repeat;
   background-size: contain;
+}
+
+#box1 img, #box4 img {
+  padding-top: 100px;
 }
 
 button {
@@ -84,15 +110,5 @@ button {
   font-size: 20pt;
   position: fixed;
   bottom: 0;
-  left: 0;
-}
-
-#box1 img, #box4 img {
-  padding-top: 100px;
-}
-
-.logo {
-  position: absolute;
-  top: 0;
   left: 0;
 }

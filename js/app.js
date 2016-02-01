@@ -11,12 +11,13 @@ $(document).ready(function(){
   var timer2;
   var snapCount = 0;
 
+//scoreboard that will keep track on the score of the players
   function updateScoreBoard() {
     $('#score1').text(player1Score);
     $('#score2').text(player2Score);
   }
 
-
+//create a reset button that will reset the scores to 0's
   $("#reset").click(function() {
     console.log("reset");
     currentCard1 = null;
@@ -30,6 +31,7 @@ $(document).ready(function(){
     updateScoreBoard();
   });
 
+//allocating keys A and L as two players 
   $(window).on("keyup", checkKeyPressed);
   function checkKeyPressed(e) {
     if(currentCard1 === currentCard2) {
@@ -50,14 +52,7 @@ $(document).ready(function(){
     }
   }
 
-  // $('textarea').first().keypress(function (e)
-  // {
-  //     if (e.which === 13) console.log('player1 enter key pressed');
-  // }).nextAll().keypress(function (e)
-  // {
-  //     if (e.which === 13) console.log('player2 enter key pressed');
-  // });
-
+//stop the game at 5 snaps, Mike helped with this function
   function clearTimers() {
     if(snapCount === 5) {
       clearTimeout(timer1);
@@ -65,6 +60,7 @@ $(document).ready(function(){
     }
   }
 
+//randomly select the cards for the game. I managed to get this function waorking and got help to insert the images into the array
   timer1 = setInterval(function(){   
     var randomIndex1 = Math.floor((Math.random()*6));
     currentCard1 = cards[randomIndex1]
@@ -82,6 +78,18 @@ $(document).ready(function(){
   }, 1000);
 });
  
+
+
+
+
+
+// $('textarea').first().keypress(function (e)
+// {
+//     if (e.which === 13) console.log('player1 enter key pressed');
+// }).nextAll().keypress(function (e)
+// {
+//     if (e.which === 13) console.log('player2 enter key pressed');
+// });
 
 
 //setInterval to run a loop every 2's === 2000 until a snap occurs, the loop will keep going until someone has won the best of 3
